@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jyothisanga University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      flex: 1 1 200px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ffcc00;
+      color: #003366;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x700/?university,students') no-repeat center center/cover;
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      color: #fff;
+      font-size: 3.2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1.2rem 2rem;
+      border-radius: 12px;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 1rem;
+      border-left: 6px solid #ffcc00;
+      padding-left: 1rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    /* Founder Spotlight Section */
+    .founder-spotlight {
+      display: flex;
+      gap: 2rem;
+      background: #f9f9f9;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .founder-spotlight img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #003366;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .founder-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .founder-text h4 {
+      font-size: 1.8rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+
+      .founder-spotlight {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .founder-spotlight img {
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jyothisanga University</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Empowering Futures Through Education</h2>
+  </section>
+
+  <section>
+    <h3>Welcome to Jyothisanga University</h3>
+    <p>
+      Jyothisanga University is a future-driven institution offering cutting-edge education across disciplines. Our commitment to academic excellence and research prepares students to lead with purpose in an ever-evolving world.
+    </p>
+    <p>
+      Explore our specialized programs, world-class faculty, and modern campus that foster innovation, creativity, and leadership.
+    </p>
+
+    <!-- Founder Spotlight -->
+    <div class="founder-spotlight">
+      <img
+        src="D:\college\PROFILE-P1.jpeg"
+        alt="Dr. Mehaboob S"
+      />
+      <div class="founder-text">
+        <h4>Dr. Mehaboob S – Founder & Visionary Leader</h4>
+        <p>
+          Dr. Mehaboob S, with over 10 years of experience in education and research, established Jyothisanga University to nurture leaders who create positive change. His passion for innovation and academic excellence guides our mission every day.
+        </p>
+        <p>
+          Under his visionary leadership, the university has blossomed into a center of creativity, research, and social impact.
+        </p>
+      </div>
+    </div>
+    <div class="founder-spotlight">
+      <img
+        src="D:\college\PROFILE-P2.jpg"
+        alt="Dr.D Nandini"
+      />
+      <div class="founder-text">
+        <h4>Dr. D. Nandini – Co-Founder & Academic Strategist</h4>
+        <p>
+          Dr. D. Nandini, a distinguished academician with over a decade of experience in higher education, co-founded Jyothisanga University with a vision to empower learners through innovative and inclusive education. Her expertise in curriculum development and educational leadership has been instrumental in shaping the university’s academic framework.
+        </p>
+        <p>
+          As a passionate advocate for student-centered learning and research excellence, Dr. Nandini continues to drive impactful initiatives that foster intellectual growth, creativity, and social responsibility across the university community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jyothisanga University. All rights reserved.</p>
+  </footer>
+</body>
+</html>

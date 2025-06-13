@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Jyothisanga University</title>
+  <style>
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f7fc;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    /* Contact Info Section */
+    .contact-info {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      gap: 2rem;
+    }
+    .info-box {
+      background: white;
+      flex: 1 1 250px;
+      padding: 1.8rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .info-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    .info-icon {
+      font-size: 2.8rem;
+      color: #0055aa;
+      margin-bottom: 0.8rem;
+    }
+    .info-label {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #003366;
+      margin-bottom: 0.3rem;
+    }
+    .info-text {
+      color: #555;
+      font-size: 0.95rem;
+      word-wrap: break-word;
+    }
+    /* Contact Form */
+    form {
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+    }
+    form h2 {
+      text-align: center;
+      margin-bottom: 1.8rem;
+      color: #003366;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #222;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 8px;
+      border: 1.8px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #0055aa;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      background-color: #003366;
+      color: white;
+      font-weight: 700;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0055aa;
+    }
+    /* Message Box */
+    #form-message {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    /* Google Map */
+    .map-container {
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+      .info-box {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Jyothisanga University</h1>
+  </header>
+
+  <main>
+    <section class="contact-info" aria-label="Contact information">
+      <div class="info-box">
+        <div class="info-icon" aria-hidden="true">📍</div>
+        <div class="info-label">Address</div>
+        <div class="info-text">Annapurneswari Camp,<br />karnataka, State, 583116, India</div>
+      </div>
+      <div class="info-box">
+        <div class="info-icon" aria-hidden="true">📞</div>
+        <div class="info-label">Phone</div>
+        <div class="info-text">+91 6362478561<br />Mon - Fri, 9am - 6pm</div>
+      </div>
+      <div class="info-box">
+        <div class="info-icon" aria-hidden="true">✉️</div>
+        <div class="info-label">Email</div>
+        <div class="info-text">info@jyothisangauniversity.edu.in</div>
+        <div class="info-text">smehaboob15116@gmail.com</div>
+      </div>
+    </section>
+
+    <section aria-label="Contact form">
+      <form id="contactForm" novalidate>
+        <h2>Get in Touch</h2>
+        <label for="name">Full Name<span aria-hidden="true" style="color:red;">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" />
+
+        <label for="email">Email Address<span aria-hidden="true" style="color:red;">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" />
+
+        <label for="message">Message<span aria-hidden="true" style="color:red;">*</span></label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required aria-required="true"></textarea>
+
+        <button type="submit">Send Message</button>
+        <div id="form-message" role="alert" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="map-container" aria-label="University location on map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.939870947976!2d77.59456641525822!3d12.971598590852154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670f3e0b3d9%3A0x8379fa40a32a2f26!2sBangalore!5e0!3m2!1sen!2sin!4v1621443708885!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google Map showing Jyothisanga University location"
+      ></iframe>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const messageBox = document.getElementById('form-message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      messageBox.textContent = '';
+      messageBox.style.color = '';
+
+      // Basic validation
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/i;
+
+      if (!name) {
+        messageBox.textContent = 'Please enter your full name.';
+        messageBox.style.color = 'red';
+        form.name.focus();
+        return;
+      }
+      if (!email || !emailPattern.test(email)) {
+        messageBox.textContent = 'Please enter a valid email address.';
+        messageBox.style.color = 'red';
+        form.email.focus();
+        return;
+      }
+      if (!message) {
+        messageBox.textContent = 'Please enter your message.';
+        messageBox.style.color = 'red';
+        form.message.focus();
+        return;
+      }
+
+      // Simulate form submission (replace with backend integration if needed)
+      messageBox.textContent = 'Thank you! Your message has been sent.';
+      messageBox.style.color = 'green';
+
+      // Reset form fields
+      form.reset();
+    });
+  </script>
+</body>
+</html>

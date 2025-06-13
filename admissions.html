@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admissions | Jyothisanga University</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f8fc;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background: #003366;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    button:hover {
+      background: #005599;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jyothisanga University Admissions</h1>
+  </header>
+
+  <form id="admissionForm">
+    <label for="name">Full Name:</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" name="phone" id="phone" required />
+
+    <label for="course">Select Course:</label>
+    <select name="course" id="course" required>
+      <option value="">--Select--</option>
+      <option value="B.Tech">B.Tech</option>
+      <option value="BBA">BBA</option>
+      <option value="MBA">MBA</option>
+      <option value="M.Sc">M.Sc</option>
+      <option value="MCA">MCA</option>
+      <option value="Phd">Phd</option>
+    </select>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" name="dob" id="dob" required />
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby_W_k-tDnqebG_Yg1cfkUXrNRMPjFPJUA8YNief9olZE56D1qLKt9zeZ-fkt-1uP9iEg/exec';
+    const form = document.getElementById('admissionForm');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const formData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        course: form.course.value,
+        dob: form.dob.value
+      };
+
+      // Validate phone number
+      if (!/^[0-9]{10}$/.test(formData.phone)) {
+        alert('Enter a valid 10-digit phone number.');
+        return;
+      }
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.result === 'success') {
+          alert("✅ Registration successful!");
+          form.reset();
+        } else {
+          alert("❌ Submission failed. Try again.");
+        }
+      })
+      .catch(err => {
+        alert("⚠️ Error connecting to the server.");
+        console.error(err);
+      });
+    });
+  </script>
+</body>
+</html>

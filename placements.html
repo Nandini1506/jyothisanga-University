@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Placements | Jyothisanga University</title>
+  <style>
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #003366;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    /* Stats Section */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .stat-box {
+      background: white;
+      flex: 1 1 200px;
+      margin: 0.5rem;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .stat-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    .stat-icon {
+      font-size: 3rem;
+      color: #0055aa;
+      margin-bottom: 1rem;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #003366;
+    }
+    .stat-label {
+      margin-top: 0.5rem;
+      font-weight: 600;
+      color: #555;
+    }
+    /* Recruiters Section */
+    .recruiters {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .recruiters h3 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+    .recruiter-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .recruiter-logos img {
+      height: 60px;
+      width: auto;
+      filter: grayscale(60%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+    .recruiter-logos img:hover {
+      filter: none;
+      transform: scale(1.1);
+    }
+    /* Testimonials Section */
+    .testimonials {
+      background: #003366;
+      color: white;
+      padding: 3rem 1rem;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    .testimonials h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .testimonial {
+      max-width: 700px;
+      margin: 1rem auto;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 2rem;
+    }
+    .testimonial::before {
+      content: "“";
+      font-size: 4rem;
+      position: absolute;
+      left: 0;
+      top: -10px;
+      color: #66aaff;
+    }
+    .testimonial-author {
+      text-align: right;
+      font-weight: 700;
+      margin-top: 0.8rem;
+      font-style: normal;
+      color: #aaddff;
+    }
+    /* Footer */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .stats {
+        flex-direction: column;
+        align-items: center;
+      }
+      .stat-box {
+        max-width: 300px;
+      }
+      .recruiter-logos {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jyothisanga University Placements</h1>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Placement introduction">
+      <h2>Empowering Students with Career Opportunities</h2>
+      <p>At Jyothisanga University, our dedicated placement cell connects students with leading companies, ensuring a smooth transition from campus to career.</p>
+    </section>
+
+    <section class="stats" aria-label="Placement statistics">
+      <div class="stat-box" role="region" aria-labelledby="stat1-label">
+        <div class="stat-icon" aria-hidden="true">🎓</div>
+        <div class="stat-number">92%</div>
+        <div class="stat-label" id="stat1-label">Placement Rate</div>
+      </div>
+      <div class="stat-box" role="region" aria-labelledby="stat2-label">
+        <div class="stat-icon" aria-hidden="true">💼</div>
+        <div class="stat-number">120+</div>
+        <div class="stat-label" id="stat2-label">Companies Visited</div>
+      </div>
+      <div class="stat-box" role="region" aria-labelledby="stat3-label">
+        <div class="stat-icon" aria-hidden="true">💰</div>
+        <div class="stat-number">₹8 LPA</div>
+        <div class="stat-label" id="stat3-label">Highest Package</div>
+      </div>
+      <div class="stat-box" role="region" aria-labelledby="stat4-label">
+        <div class="stat-icon" aria-hidden="true">📅</div>
+        <div class="stat-number">6 Months</div>
+        <div class="stat-label" id="stat4-label">Average Hiring Time</div>
+      </div>
+    </section>
+
+    <section class="recruiters" aria-label="Top recruiting companies">
+      <h3>Top Recruiting Companies</h3>
+      <div class="recruiter-logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Google_logo.svg" alt="Google Logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/TCS_logo.svg" alt="TCS Logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Infosys_logo.svg" alt="Infosys Logo" />
+      </div>
+    </section>
+
+    <section class="testimonials" aria-label="Student testimonials">
+      <h3>What Our Students Say</h3>
+      <blockquote class="testimonial">
+        Jyothisanga University’s placement cell helped me prepare for interviews and land my dream job at Microsoft. The support was incredible!
+        <div class="testimonial-author">— Priya Sharma, Software Engineer</div>
+      </blockquote>
+      <blockquote class="testimonial">
+        Thanks to Jyothisanga’s strong industry connections, I secured a position with Google immediately after graduation. Highly recommended!
+        <div class="testimonial-author">— Rajesh Kumar, Data Scientist</div>
+      </blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jyothisanga University. All rights reserved.</p>
+  </footer>
+</body>
+</html>
